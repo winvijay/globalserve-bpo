@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobalServe BPO | Excellence in Outsourcing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6', // Primary Teal
+                            600: '#0d9488', // Hover Teal
+                            900: '#134e4a', // Dark Teal
+                        },
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-pattern {
+            background-color: #f8fafc;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2394a3b8' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="text-slate-600 bg-white">
+
+    <!-- Navigation -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-100 transition-all duration-300" id="header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center text-white shadow-lg shadow-brand-500/30">
+                        <i class="ph-bold ph-headset text-2xl"></i>
+                    </div>
+                    <span class="font-heading font-bold text-2xl text-dark-900 tracking-tight">GlobalServe<span class="text-brand-500">.</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-slate-600 hover:text-brand-500 font-medium transition-colors">About</a>
+                    <a href="#services" class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Services</a>
+                    <a href="#team" class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Team</a>
+                    <a href="#testimonials" class="text-slate-600 hover:text-brand-500 font-medium transition-colors">Clients</a>
+                    <a href="#contact" class="px-5 py-2.5 bg-dark-900 text-white rounded-full font-medium hover:bg-brand-500 transition-all transform hover:-translate-y-0.5 shadow-md">Get in Touch</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand-500 focus:outline-none p-2 rounded-md">
+                        <i class="ph ph-list text-3xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#about" class="block px-3 py-4 text-base font-medium text-slate-700 hover:text-brand-500 hover:bg-slate-50 rounded-md border-b border-slate-50">About</a>
+                <a href="#services" class="block px-3 py-4 text-base font-medium text-slate-700 hover:text-brand-500 hover:bg-slate-50 rounded-md border-b border-slate-50">Services</a>
+                <a href="#team" class="block px-3 py-4 text-base font-medium text-slate-700 hover:text-brand-500 hover:bg-slate-50 rounded-md border-b border-slate-50">Team</a>
+                <a href="#testimonials" class="block px-3 py-4 text-base font-medium text-slate-700 hover:text-brand-500 hover:bg-slate-50 rounded-md mb-4">Clients</a>
+                <a href="#contact" class="block w-full text-center px-5 py-3 bg-brand-500 text-white rounded-lg font-medium hover:bg-brand-600 transition-colors">Get in Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 hero-pattern overflow-hidden relative">
+        <!-- Decorative blobs -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-100/50 blur-3xl opacity-60"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-100/50 blur-3xl opacity-60"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Hero Content -->
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-sm font-medium text-brand-600 mb-6 shadow-sm">
+                        <span class="flex h-2 w-2 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                        </span>
+                        Global Delivery Centers
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 leading-tight mb-6">
+                        Scale Your Operations with <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-blue-500">Global Talent</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+                        GlobalServe is a premier BPO partner, delivering cost-effective customer support, back-office operations, and specialized outsourcing solutions tailored to accelerate your business growth.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#services" class="px-8 py-4 bg-brand-500 text-white rounded-full font-medium hover:bg-brand-600 transition-colors shadow-lg shadow-brand-500/30 flex items-center justify-center gap-2">
+                            Explore BPO Solutions
+                            <i class="ph-bold ph-arrow-right"></i>
+                        </a>
+                        <a href="#about" class="px-8 py-4 bg-white text-dark-900 border border-slate-200 rounded-full font-medium hover:bg-slate-50 transition-colors flex items-center justify-center gap-2">
+                            Why GlobalServe
+                            <i class="ph-bold ph-info"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image/Graphic -->
+                <div class="w-full lg:w-1/2 mt-12 lg:mt-0 relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-slate-200/50 border border-white">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Customer support representatives working in a modern call center" class="w-full h-auto object-cover rounded-2xl">
+                        
+                        <!-- Floating Stats Card -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-slate-100 hidden md:flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                                <i class="ph-fill ph-headset text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-500 font-medium">Active Agents</p>
+                                <p class="text-2xl font-bold text-dark-900">2,500+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="py-10 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm font-semibold text-slate-400 uppercase tracking-wider mb-6">Trusted by innovative companies worldwide</p>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Using placeholder icons for company logos -->
+                <div class="flex items-center gap-2"><i class="ph-fill ph-apple-logo text-3xl"></i><span class="font-heading font-bold text-xl">TechCorp</span></div>
+                <div class="flex items-center gap-2"><i class="ph-fill ph-microsoft-logo text-3xl"></i><span class="font-heading font-bold text-xl">GlobalSys</span></div>
+                <div class="flex items-center gap-2"><i class="ph-fill ph-amazon-logo text-3xl"></i><span class="font-heading font-bold text-xl">NexusTech</span></div>
+                <div class="flex items-center gap-2"><i class="ph-fill ph-meta-logo text-3xl"></i><span class="font-heading font-bold text-xl">Innova</span></div>
+                <div class="flex items-center gap-2 hidden sm:flex"><i class="ph-fill ph-google-logo text-3xl"></i><span class="font-heading font-bold text-xl">Alpha</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- About Image Grid -->
+                <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1556740749-887f6717d5e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Customer service interaction" class="rounded-2xl object-cover h-64 w-full shadow-md mt-8">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Global operations team" class="rounded-2xl object-cover h-64 w-full shadow-md">
+                </div>
+
+                <!-- About Content -->
+                <div class="w-full lg:w-1/2">
+                    <span class="text-brand-500 font-bold tracking-wider uppercase text-sm mb-2 block">Our Advantage</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark-900 mb-6">Operational Excellence Around the Clock</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        GlobalServe was established to help businesses optimize their workflows and reduce overhead costs without compromising on quality. We seamlessly integrate with your existing processes, acting as an extension of your own team.
+                    </p>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        With delivery centers strategically located across 5 countries, we provide multilingual support and 24/7 coverage, ensuring your operations never sleep and your customers are always supported.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 border-t border-slate-100 pt-8">
+                        <div>
+                            <h4 class="text-4xl font-bold text-dark-900 mb-2">24<span class="text-brand-500">/7</span></h4>
+                            <p class="text-slate-500 font-medium">Operational Support</p>
+                        </div>
+                        <div>
+                            <h4 class="text-4xl font-bold text-dark-900 mb-2">40<span class="text-brand-500">+</span></h4>
+                            <p class="text-slate-500 font-medium">Languages Spoken</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 md:py-28 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-500 font-bold tracking-wider uppercase text-sm mb-2 block">Our Services</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark-900 mb-4">End-to-End Outsourcing Solutions</h2>
+                <p class="text-slate-600 text-lg">We provide highly trained professionals to handle your critical business processes, allowing you to focus on strategy and growth.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 group">
+                    <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="ph-fill ph-headset text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-900 mb-3">Customer Experience (CX)</h3>
+                    <p class="text-slate-600 mb-6">Omnichannel support including voice, chat, and email to deliver exceptional experiences and boost customer retention.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-brand-600 font-medium hover:text-brand-800 transition-colors">Learn more <i class="ph-bold ph-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 group">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="ph-fill ph-folders text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-900 mb-3">Back-Office Operations</h3>
+                    <p class="text-slate-600 mb-6">Streamline your administrative tasks, order processing, and document management with our meticulous support teams.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-medium hover:text-blue-800 transition-colors">Learn more <i class="ph-bold ph-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 group">
+                    <div class="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="ph-fill ph-database text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-900 mb-3">Data Entry & Processing</h3>
+                    <p class="text-slate-600 mb-6">Accurate, high-volume data entry, cleansing, and mining services to ensure your business intelligence is built on clean data.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-purple-600 font-medium hover:text-purple-800 transition-colors">Learn more <i class="ph-bold ph-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 group">
+                    <div class="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="ph-fill ph-desktop text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-900 mb-3">IT Helpdesk Support</h3>
+                    <p class="text-slate-600 mb-6">Tier 1 and Tier 2 technical support to resolve internal and external IT issues quickly and keep your systems running.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-orange-600 font-medium hover:text-orange-800 transition-colors">Learn more <i class="ph-bold ph-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 group">
+                    <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center text-green-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="ph-fill ph-calculator text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-900 mb-3">Finance & Accounting</h3>
+                    <p class="text-slate-600 mb-6">Secure handling of accounts payable/receivable, payroll processing, and bookkeeping by certified financial professionals.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-green-600 font-medium hover:text-green-800 transition-colors">Learn more <i class="ph-bold ph-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 group">
+                    <div class="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center text-red-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="ph-fill ph-users-three text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark-900 mb-3">HR Outsourcing</h3>
+                    <p class="text-slate-600 mb-6">End-to-end recruitment process outsourcing (RPO), onboarding support, and HR administration to build your dream team.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-red-600 font-medium hover:text-red-800 transition-colors">Learn more <i class="ph-bold ph-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-500 font-bold tracking-wider uppercase text-sm mb-2 block">Leadership</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark-900 mb-4">Meet the Minds Behind NexGen</h2>
+                <p class="text-slate-600 text-lg">Our leadership team brings together decades of experience across technology, strategy, and business development.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="group text-center">
+                    <div class="relative w-48 h-48 mx-auto mb-4 overflow-hidden rounded-full border-4 border-slate-50 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CEO" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-brand-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+                            <a href="#" class="text-white hover:text-brand-300"><i class="ph-fill ph-linkedin-logo text-2xl"></i></a>
+                            <a href="#" class="text-white hover:text-brand-300"><i class="ph-fill ph-twitter-logo text-2xl"></i></a>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold text-dark-900">Baskaran Kannan</h4>
+                    <p class="text-brand-500 font-medium">Chief Executive Officer</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="group text-center">
+                    <div class="relative w-48 h-48 mx-auto mb-4 overflow-hidden rounded-full border-4 border-slate-50 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CTO" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-brand-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+                            <a href="#" class="text-white hover:text-brand-300"><i class="ph-fill ph-linkedin-logo text-2xl"></i></a>
+                            <a href="#" class="text-white hover:text-brand-300"><i class="ph-fill ph-github-logo text-2xl"></i></a>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold text-dark-900">Vijayaraja Murugan</h4>
+                    <p class="text-brand-500 font-medium">Chief Technology Officer</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="group text-center">
+                    <div class="relative w-48 h-48 mx-auto mb-4 overflow-hidden rounded-full border-4 border-slate-50 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="COO" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-brand-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+                            <a href="#" class="text-white hover:text-brand-300"><i class="ph-fill ph-linkedin-logo text-2xl"></i></a>
+                            <a href="#" class="text-white hover:text-brand-300"><i class="ph-fill ph-twitter-logo text-2xl"></i></a>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold text-dark-900">Jeyadeepan Packiaraj</h4>
+                    <p class="text-brand-500 font-medium">Chief Operating Officer</p>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="group text-center">
+                    <div class="relative w-48 h-48 mx-auto mb-4 overflow-hidden rounded-full border-4 border-slate-50 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Design Lead" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-brand-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+                            <a href="#" class="text-white hover:text-brand-300"><i class="ph-fill ph-linkedin-logo text-2xl"></i></a>
+                            <a href="#" class="text-white hover:text-brand-300"><i class="ph-fill ph-dribbble-logo text-2xl"></i></a>
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold text-dark-900">Elena Rodriguez</h4>
+                    <p class="text-brand-500 font-medium">Head of Design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 md:py-28 bg-dark-900 text-white relative overflow-hidden">
+        <!-- Background accents -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-500 rounded-full blur-[100px] opacity-20"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 rounded-full blur-[100px] opacity-20"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Client Success Stories</h2>
+                <p class="text-slate-400 text-lg">Hear how our outsourcing solutions have driven efficiency and growth for our global partners.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-dark-800 p-8 rounded-2xl border border-slate-700/50 relative">
+                    <i class="ph-fill ph-quotes text-4xl text-brand-500/30 absolute top-6 right-6"></i>
+                    <div class="flex gap-1 text-yellow-400 mb-6">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-slate-300 mb-8 italic">"Partnering with GlobalServe for our customer support reduced our response times by 60%. Their agents feel like a true extension of our brand."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-600 rounded-full overflow-hidden">
+                             <img src="https://i.pravatar.cc/150?img=11" alt="Avatar" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="font-bold">Michael T.</h5>
+                            <p class="text-sm text-slate-400">VP of Operations, GlobalRetail</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-dark-800 p-8 rounded-2xl border border-slate-700/50 relative">
+                    <i class="ph-fill ph-quotes text-4xl text-brand-500/30 absolute top-6 right-6"></i>
+                    <div class="flex gap-1 text-yellow-400 mb-6">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-slate-300 mb-8 italic">"We outsourced our entire data entry division to GlobalServe. The accuracy is flawless, and it saved us 40% in operational costs annually."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-600 rounded-full overflow-hidden">
+                             <img src="https://i.pravatar.cc/150?img=32" alt="Avatar" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="font-bold">Samantha L.</h5>
+                            <p class="text-sm text-slate-400">Director of Finance, InnovaTech</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-dark-800 p-8 rounded-2xl border border-slate-700/50 relative md:hidden lg:block">
+                    <i class="ph-fill ph-quotes text-4xl text-brand-500/30 absolute top-6 right-6"></i>
+                    <div class="flex gap-1 text-yellow-400 mb-6">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    <p class="text-slate-300 mb-8 italic">"Their 24/7 IT Helpdesk has been a game-changer for our international teams. We no longer worry about downtime disrupting our remote workforce."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-600 rounded-full overflow-hidden">
+                             <img src="https://i.pravatar.cc/150?img=68" alt="Avatar" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h5 class="font-bold">Robert K.</h5>
+                            <p class="text-sm text-slate-400">CTO, NexusGlobal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-28 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col lg:flex-row">
+                
+                <!-- Contact Info (Left) -->
+                <div class="bg-dark-900 text-white w-full lg:w-2/5 p-10 md:p-12 relative overflow-hidden">
+                    <div class="absolute bottom-0 right-0 w-48 h-48 bg-brand-500 rounded-tl-full opacity-20"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-bold mb-2">Let's Talk</h3>
+                        <p class="text-slate-400 mb-10">Ready to start your next project or have a question? Get in touch with our team.</p>
+
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="ph-fill ph-map-pin text-xl text-brand-400"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-lg mb-1">Our Headquarters</h5>
+                                    <p class="text-slate-400 leading-relaxed">7/334, Theni Main Road, Checkanurani, Madurai, Tamilnadu, India - 625514</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="ph-fill ph-envelope-simple text-xl text-brand-400"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-lg mb-1">Email Us</h5>
+                                    <p class="text-slate-400">hello@nexgeninnovations.com</p>
+                                    <p class="text-slate-400">support@nexgeninnovations.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="ph-fill ph-phone text-xl text-brand-400"></i>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-lg mb-1">Call Us</h5>
+                                    <p class="text-slate-400">+91 95660 97625</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form (Right) -->
+                <div class="w-full lg:w-3/5 p-10 md:p-12">
+                    <h3 class="text-2xl font-bold text-dark-900 mb-6">Send us a message</h3>
+                    <!-- Form using basic HTML structure. For actual submission, you'd need a backend endpoint -->
+                    <form onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-slate-700 mb-2">First Name</label>
+                                <input type="text" id="firstName" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all bg-slate-50 focus:bg-white placeholder-slate-400" placeholder="John">
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-slate-700 mb-2">Last Name</label>
+                                <input type="text" id="lastName" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all bg-slate-50 focus:bg-white placeholder-slate-400" placeholder="Doe">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all bg-slate-50 focus:bg-white placeholder-slate-400" placeholder="john@company.com">
+                        </div>
+
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-slate-700 mb-2">Interested Service</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all bg-slate-50 focus:bg-white text-slate-600">
+                                <option value="">Select a service...</option>
+                                <option value="cx">Customer Experience Support</option>
+                                <option value="backoffice">Back-Office Operations</option>
+                                <option value="data">Data Entry & Processing</option>
+                                <option value="it">IT Helpdesk</option>
+                                <option value="finance">Finance & Accounting</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all bg-slate-50 focus:bg-white placeholder-slate-400 resize-none" placeholder="Tell us about your project..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full px-6 py-4 bg-brand-500 text-white font-medium rounded-lg hover:bg-brand-600 transition-colors shadow-lg shadow-brand-500/20 flex items-center justify-center gap-2">
+                            Send Message
+                            <i class="ph-bold ph-paper-plane-tilt"></i>
+                        </button>
+                        
+                        <!-- Success Message Container (Hidden by default) -->
+                        <div id="form-success" class="hidden p-4 rounded-lg bg-green-50 border border-green-200 text-green-700 flex items-center gap-3">
+                            <i class="ph-fill ph-check-circle text-xl"></i>
+                            <p class="font-medium">Thank you! Your message has been sent successfully.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-900 border-t border-slate-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Brand Col -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-brand-500 rounded-md flex items-center justify-center text-white">
+                            <i class="ph-bold ph-headset text-xl"></i>
+                        </div>
+                        <span class="font-heading font-bold text-xl text-white tracking-tight">GlobalServe<span class="text-brand-500">.</span></span>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+                        Delivering world-class business process outsourcing solutions to scale your operations and drive efficiency globally.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-twitter-logo text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-linkedin-logo text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-facebook-logo text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links Col 1 -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6 uppercase text-sm tracking-wider">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-slate-400 hover:text-brand-500 transition-colors text-sm">About Us</a></li>
+                        <li><a href="#team" class="text-slate-400 hover:text-brand-500 transition-colors text-sm">Our Team</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-brand-500 transition-colors text-sm">Careers</a></li>
+                        <li><a href="#" class="text-slate-400 hover:text-brand-500 transition-colors text-sm">News & Press</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links Col 2 -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6 uppercase text-sm tracking-wider">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-slate-400 hover:text-brand-500 transition-colors text-sm">Customer Support</a></li>
+                        <li><a href="#services" class="text-slate-400 hover:text-brand-500 transition-colors text-sm">Back-Office Ops</a></li>
+                        <li><a href="#services" class="text-slate-400 hover:text-brand-500 transition-colors text-sm">IT Helpdesk</a></li>
+                        <li><a href="#services" class="text-slate-400 hover:text-brand-500 transition-colors text-sm">Data Processing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Col -->
+                <div>
+                    <h4 class="text-white font-semibold mb-6 uppercase text-sm tracking-wider">Subscribe</h4>
+                    <p class="text-slate-400 text-sm mb-4">Stay updated with our latest news and technology insights.</p>
+                    <form class="flex" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Your email" class="w-full px-4 py-2 bg-dark-800 border border-slate-700 rounded-l-md focus:outline-none focus:border-brand-500 text-white text-sm" required>
+                        <button type="submit" class="px-4 py-2 bg-brand-500 text-white rounded-r-md hover:bg-brand-600 transition-colors">
+                            <i class="ph-bold ph-paper-plane-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm">
+                    &copy; <span id="year"></span> GlobalServe BPO. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-slate-500 hover:text-white text-sm transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Update current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle Logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            
+            // Toggle between hamburger and X icon
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-list');
+            } else {
+                icon.classList.remove('ph-list');
+                icon.classList.add('ph-x');
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('ph-x');
+                icon.classList.add('ph-list');
+            });
+        });
+
+        // Header scroll effect (add shadow/shrink slightly when scrolled)
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md', 'py-1');
+            } else {
+                header.classList.remove('shadow-md', 'py-1');
+            }
+        });
+
+        // Simple Form Handling Mockup
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            // Get the submit button and original content
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            // Change button state to loading
+            btn.innerHTML = '<i class="ph-bold ph-spinner animate-spin"></i> Sending...';
+            btn.disabled = true;
+            btn.classList.add('opacity-75', 'cursor-not-allowed');
+
+            // Simulate API call delay
+            setTimeout(() => {
+                // Show success message
+                document.getElementById('form-success').classList.remove('hidden');
+                
+                // Reset form
+                e.target.reset();
+                
+                // Restore button
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                btn.classList.remove('opacity-75', 'cursor-not-allowed');
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('form-success').classList.add('hidden');
+                }, 5000);
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
